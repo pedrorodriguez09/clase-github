@@ -1,0 +1,167 @@
+/* reset */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */ 
+
+body{
+    background-color: #eceef3;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/*estilos del header (en la version de celular
+no voy a querer qeu aparezca porque la pantalla es 
+muy pequeña) */ 
+
+header{
+    display: none;
+}
+
+/* estilos de main */ 
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+main h2{
+    margin: 1rem;
+}
+
+main h2 span{
+    display: block;
+}
+
+main .boton{
+    background-color: #bee0f1;
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+    color: whitesmoke;
+    box-shadow: 3px 3px 10px black;
+}
+
+main img{
+    width: 60%;
+}
+
+/* estilos de section */ 
+
+section{
+    display: none;
+}
+
+
+/* estilos de footer */ 
+
+footer h4{
+    text-align: center;
+    margin: 1rem;
+}
+
+
+/* pantallas de tablet */ 
+
+@media screen and (min-width:600px){
+    /* estilos de header */ 
+    header{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 0.7rem;
+        align-items: center;
+    }
+
+    header nav ul{
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+    }
+}
+
+header nav ul li{
+    font-weight: bold;
+}
+
+/* estilos de section */ 
+
+section{
+    display: block;
+    display: flex;
+    background-color: #bee0f1;
+    padding: 1rem;
+}
+
+section div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+}
+
+section div img{
+    width: 20%;
+}
+
+/* estilos de pantalla de escritorio */ 
+
+@media screen and (min-width: 1024px){
+
+/* estilos de main */ 
+
+main{
+    width: 1000px;
+     display: grid;
+     grid-template-columns: auto;
+     grid-template-rows: auto;
+
+     grid-template-areas: 
+     "p img"
+     "h2 img"
+     "p-dos img"
+     "boton img";
+     justify-content: center;
+     justify-items: center;
+     }
+
+     main h2{
+        grid-area: h2;
+     }
+
+     main img{
+        grid-area: img;
+     }
+
+     main p{
+        grid-area: p;
+        width: 70%;
+     }
+
+     main .p-dos{
+        grid-area: p-dos;
+     }
+
+     main .boton{
+        grid-area: boton;
+     }
+
+     /* estilos de footer */ 
+
+     footer{
+        margin-top: 1rem;  
+       }
+  
+
+
+
+}
